@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+    <h1>我的第一个标题</h1>
+    <p>我的第一个段落。</p>
+    <button class="call">请求</button>
+</body>
+<script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".call").click(function () {
+            console.log(1234)
+            $.ajax({
+                url:"http://localhost:3000/user",
+　　             method:"GET",
+                success: function (data) {
+                    console.log(data)
+                },
+            });
+        });
+    });
+</script>
+
+</html>
